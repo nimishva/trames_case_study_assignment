@@ -1,0 +1,119 @@
+[
+  {
+    "type": "post",
+    "url": "/api/v1/auth/OtpGeneration",
+    "title": "Generating OTP",
+    "version": "0.0.1",
+    "group": "POST",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"OTP has been sent to the mail id\",\n\t    \"status\": 200,\n\t    \"data\": null\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"Data Fetching error.\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/routes/auth.js",
+    "groupTitle": "POST",
+    "name": "PostApiV1AuthOtpgeneration"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/auth/validateOtp",
+    "title": "Validate OTP",
+    "version": "0.0.1",
+    "group": "POST",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"OTP Validated\",\n\t    \"status\": 200,\n\t    \"data\": null\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"OTP Not Valid\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/routes/auth.js",
+    "groupTitle": "POST",
+    "name": "PostApiV1AuthValidateotp"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/users/signInWithToken",
+    "title": "Sign In With Token",
+    "version": "0.0.1",
+    "group": "POST",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"Login successfull\",\n\t    \"status\": 200,\n        \"data\": [ \n                    userData :   \n                                {\n\t\t\t\t\t\t            userId: \"string\",\n\t\t\t\t\t            \tusername: \"string\",\n\t\t\t\t\t\t            firstName: \"string\",\n\t\t\t\t\t\t            lastName: \"string\",\n\t\t\t\t\t\t            email: string,\n\t\t\t\t\t\t            mobile: number,\n\t\t\t\t\t\t            createdOn: \"date\"\n\t\t\t\t\t             }\n\t    \t\t]\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"User details not found\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        },
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"Token Validation Error\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/routes/users.js",
+    "groupTitle": "POST",
+    "name": "PostApiV1UsersSigninwithtoken"
+  },
+  {
+    "type": "post",
+    "url": "/api/v1/users/signup",
+    "title": "New User Signup",
+    "version": "0.0.1",
+    "group": "POST",
+    "success": {
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": " {\n\t    \"error\": false,\n\t    \"message\": \"User Created\",\n\t    \"status\": 200,\n\t    \"data\": [\n                              {\n\t\t\t\t\t\t            userId: \"string\",\n\t\t\t\t\t            \tusername: \"string\",\n\t\t\t\t\t\t            firstName: \"string\",\n\t\t\t\t\t\t            lastName: \"string\",\n\t\t\t\t\t\t            email: string,\n\t\t\t\t\t\t            mobile: number,\n\t\t\t\t\t\t            createdOn: \"date\"\n\t\t\t\t\t             }\n\t    \t\t]\n\t    \t}\n\t\t}\n\t}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "Error-Response:",
+          "content": "\n{\n\t    \"error\": true,\n\t    \"message\": \"user creation error\",\n\t    \"status\": 500,\n\t    \"data\": null\n\t   }",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "app/routes/users.js",
+    "groupTitle": "POST",
+    "name": "PostApiV1UsersSignup"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "name": "tramesapi",
+  "version": "1.0.0",
+  "description": "Simple User Registration and Authentication API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nimish V A",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.1.1",
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.26.0",
+    "moment-timezone": "^0.5.31",
+    "mongoose": "^5.9.15",
+    "shortid": "^2.2.15",
+    "speakeasy": "^2.0.0"
+  }
+}
